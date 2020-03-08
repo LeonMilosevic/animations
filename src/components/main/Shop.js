@@ -1,9 +1,9 @@
 import React from "react";
 
-const Home = () => {
+const Shop = () => {
   return (
     <div className="page">
-      <h1>Home text</h1>
+      <h1>Shop link</h1>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore odit
         facere fugiat ea, distinctio omnis ad, tenetur, commodi accusantium ipsa
@@ -14,4 +14,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Shop;
