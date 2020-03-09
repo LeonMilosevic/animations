@@ -1,15 +1,34 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+// import third party
+import { TweenMax, Power3 } from "gsap";
+import { Link } from "react-router-dom";
+// import icons
+import CloseIcon from "@material-ui/icons/Close";
 
 const Inspiration = () => {
+  // declare ref for better dom manipulation with gsap
+  let close = useRef(null);
+  // on mount start animations
+  useEffect(() => {
+    TweenMax.to(close, {
+      opacity: 1,
+      ease: Power3.easeOut,
+      duration: 0.1,
+      delay: 0.5
+    });
+  }, []);
   return (
-    <div className="page">
-      <h1>Inspiration Link</h1>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore odit
-        facere fugiat ea, distinctio omnis ad, tenetur, commodi accusantium ipsa
-        praesentium officiis dicta vitae veniam pariatur eligendi. Blanditiis,
-        corporis error!
-      </p>
+    <div className="inspiration_wrapper">
+      <Link
+        id="close"
+        ref={el => {
+          close = el;
+        }}
+        className="link_nostyle back_icon"
+        to="/"
+      >
+        <CloseIcon style={{ fontSize: "56px" }} />
+      </Link>
     </div>
   );
 };

@@ -27,91 +27,91 @@ const Letters = () => {
       opacity: 1,
       y: -20,
       ease: Power3.easeOut,
-      delay: 0.2
+      delay: 0.3
     });
     TweenMax.to(letterE, 2, {
       opacity: 1,
       y: -20,
       ease: Power3.easeOut,
-      delay: 0.3
+      delay: 0.31
     });
     TweenMax.to(letterM, 2, {
       opacity: 1,
       y: -20,
       ease: Power3.easeOut,
-      delay: 0.4
+      delay: 0.32
     });
     TweenMax.to(letterI, 2, {
       opacity: 1,
       y: -20,
       ease: Power3.easeOut,
-      delay: 0.5
+      delay: 0.33
     });
     TweenMax.to(letterN, 2, {
       opacity: 1,
       y: -20,
       ease: Power3.easeOut,
-      delay: 0.6
+      delay: 0.34
     });
     TweenMax.to(letterII, 2, {
       opacity: 1,
       y: -20,
       ease: Power3.easeOut,
-      delay: 0.7
+      delay: 0.35
     });
     TweenMax.to(letterMM, 2, {
       opacity: 1,
       y: -20,
       ease: Power3.easeOut,
-      delay: 0.8
+      delay: 0.36
     });
     TweenMax.to(letterO, 2, {
       opacity: 1,
       y: -20,
       ease: Power3.easeOut,
-      delay: 0.9
+      delay: 0.37
     });
     TweenMax.to(letterC, 2, {
       opacity: 1,
       y: -20,
       ease: Power3.easeOut,
-      delay: 1.1
+      delay: 0.38
     });
     TweenMax.to(letterEE, 2, {
       opacity: 1,
       y: -20,
       ease: Power3.easeOut,
-      delay: 1.2
+      delay: 0.39
     });
     TweenMax.to(letterNN, 2, {
       opacity: 1,
       y: -20,
       ease: Power3.easeOut,
-      delay: 1.3
+      delay: 0.4
     });
     TweenMax.to(letterT, 2, {
       opacity: 1,
       y: -20,
       ease: Power3.easeOut,
-      delay: 1.4
+      delay: 0.41
     });
     TweenMax.to(letterRR, 2, {
       opacity: 1,
       y: -20,
       ease: Power3.easeOut,
-      delay: 1.5
+      delay: 0.42
     });
     TweenMax.to(letterA, 2, {
       opacity: 1,
       y: -20,
       ease: Power3.easeOut,
-      delay: 1.6
+      delay: 0.43
     });
     TweenMax.to(letterS, 2, {
       opacity: 1,
       y: -20,
       ease: Power3.easeOut,
-      delay: 1.7
+      delay: 0.44
     });
   }, []);
   return (

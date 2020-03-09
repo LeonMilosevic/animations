@@ -16,19 +16,19 @@ const MenuItems = () => {
       opacity: 1,
       x: -130,
       ease: Power3.easeOut,
-      delay: 3
+      delay: 2
     });
     TweenMax.to(box2, 2, {
       opacity: 1,
       x: 0,
       ease: Power3.easeOut,
-      delay: 2
+      delay: 1
     });
     TweenMax.to(box3, 2, {
       opacity: 1,
       x: 130,
       ease: Power3.easeOut,
-      delay: 3
+      delay: 2
     });
   }, []);
 
@@ -40,7 +40,7 @@ const MenuItems = () => {
         }}
         className="li-items"
       >
-        <Link to="/shop">Shop</Link>
+        <Link to="/inspiration">Inspiration</Link>
       </span>
       <span
         ref={el => {
@@ -48,7 +48,7 @@ const MenuItems = () => {
         }}
         className="li-items"
       >
-        <Link to="/inspiration">Inspiration</Link>
+        <Link to="/shop">Shop</Link>
       </span>
       <span
         ref={el => {
