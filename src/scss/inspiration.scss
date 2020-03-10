@@ -1,0 +1,48 @@
+// random func to generate random position of images
+
+/* inspiration page */
+.inspiration_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 1);
+  width: 3000px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.inspiration_container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.div_image {
+  width: 150px;
+  max-height: 150px;
+}
+
+.back_icon {
+  position: relative;
+  left: 20px;
+  top: 20px;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.back_icon:hover {
+  transform: rotate(0.25turn);
+}
+
+.back_icon:visited {
+  color: white;
+}
+.back_icon:active {
+  color: white;
+}
+/* inspiration functionality */
+.inspiration_imgs {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
