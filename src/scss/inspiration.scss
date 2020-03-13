@@ -5,30 +5,36 @@
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   background-color: rgba(0, 0, 0, 1);
-  width: 3000px;
+  width: 300%;
   height: 100%;
   overflow: hidden;
 }
 
 .inspiration_container {
+  position: absolute;
+  right: -20%;
+  top: 80px;
   width: 100%;
-  height: 100%;
-  position: relative;
+  height: 92%;
   overflow: hidden;
 }
 
 .div_image {
+  display: inline-block;
+  position: relative;
   width: 150px;
   max-height: 150px;
 }
 
 .back_icon {
-  position: relative;
+  position: fixed;
   left: 20px;
   top: 20px;
   transition: all 0.5s ease;
   opacity: 0;
+  z-index: 2500;
 }
 .back_icon:hover {
   transform: rotate(0.25turn);
