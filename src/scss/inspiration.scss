@@ -1,31 +1,39 @@
-// random func to generate random position of images
-
 /* inspiration page */
 .inspiration_wrapper {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 1);
-  width: 300%;
+  background-color: #b59369;
+  width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
 .inspiration_container {
   position: absolute;
-  right: -20%;
-  top: 80px;
-  width: 100%;
-  height: 92%;
-  overflow: hidden;
+  left: 1500px;
+  top: 0;
+  width: 6000px;
+  height: 100%;
 }
 
 .div_image {
   display: inline-block;
   position: relative;
-  width: 150px;
-  max-height: 150px;
+  opacity: 0.8;
+  transition: all 0.5s ease;
+  &:hover {
+    opacity: 1;
+    z-index: 100;
+  }
+}
+
+.inspiration_img {
+  -webkit-box-shadow: 2px 5px 25px 5px rgba(0, 0, 0, 0.53);
+  -moz-box-shadow: 2px 5px 25px 5px rgba(0, 0, 0, 0.53);
+  box-shadow: 2px 5px 25px 5px rgba(0, 0, 0, 0.53);
+  border: 15px solid white;
+  object-fit: cover;
 }
 
 .back_icon {
@@ -34,7 +42,7 @@
   top: 20px;
   transition: all 0.5s ease;
   opacity: 0;
-  z-index: 2500;
+  z-index: 150;
 }
 .back_icon:hover {
   transform: rotate(0.25turn);
@@ -46,9 +54,28 @@
 .back_icon:active {
   color: white;
 }
-/* inspiration functionality */
-.inspiration_imgs {
-  width: 100px;
-  height: 100px;
+/* modal */
+
+// modal block
+.modal_block {
+  display: none;
   position: absolute;
+  background-color: red;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1701;
+}
+
+.modal_close {
+  display: none;
+  width: 10%;
+  height: 100%;
+  position: relative;
+  left: -300px;
+  top: 0;
+  background-color: white;
+  z-index: 1711;
+  overflow: hidden;
 }
