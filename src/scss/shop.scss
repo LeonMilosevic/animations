@@ -1,0 +1,32 @@
+.shop_nav {
+  position: absolute;
+  top: 60%;
+  left: 99%;
+  width: 100%;
+}
+
+.shop_nav__li {
+  border: 15px solid pink;
+  background-color: white;
+  margin: 10px 0;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+  &:hover {
+    border: 10px solid white;
+    transform: scale(1.3);
+  }
+}
+// carousel settings
+.carousel {
+  height: 570px !important;
+}
+
+.carousel-item {
+  width: 400px !important;
+  height: 400px !important;
+}
+
+.carousel-img {
+  width: 400px !important;
+  height: 400px !important;
+}

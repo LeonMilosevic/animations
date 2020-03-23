@@ -34,7 +34,6 @@ const Inspiration = () => {
   ];
   // declare ref for better dom manipulation with gsap
   let close = useRef(null);
-  let closeModal = useRef(null);
   let container = useRef(null);
 
   // use effect for random funcs to avoid constant rerender of images when modal pops up
@@ -88,15 +87,16 @@ const Inspiration = () => {
 
     const handleOpenModal = e => {
       const modalImg = document.getElementById("modal_img");
+      const modalClose = document.getElementById("modal_close");
       modalImg.src = e.target.src;
-      modalTlFunc(e.target, modalImg);
+      modalTlFunc(e.target, modalImg, modalClose);
       masterTl.pause();
-      setModalOpen(true);
     };
 
     const handleCloseModal = e => {
       e.preventDefault();
       let modalImg = e.target.parentElement.parentElement.nextSibling;
+      const modalClose = document.getElementById("modal_close");
       // get the image from the main div to change its opacity back to 1
       let mainDivImage;
       imgs.forEach(img => {
@@ -104,8 +104,7 @@ const Inspiration = () => {
           mainDivImage = img;
         }
       });
-      modalTlReverseFunc(mainDivImage, modalImg);
-      setModalOpen(false);
+      modalTlReverseFunc(mainDivImage, modalImg, modalClose);
       masterTl.resume();
     };
     // create timelines
@@ -116,16 +115,29 @@ const Inspiration = () => {
     const modalTlReverse = new gsap.timeline();
 
     // creating parametars for modal animation function
-    const modalTlFunc = (target, modalImg) => {
+    const modalTlFunc = (target, modalImg, modalClose) => {
       return modalTl
-        .to(target, { opacity: 0, duration: 0.5 })
-        .from(modalImg, { opacity: 0, duration: 0.5 });
+        .to(target, {
+          opacity: 0,
+          duration: 0.5,
+          onComplete: setModalOpen(true)
+        })
+        .from(modalImg, { opacity: 0, duration: 0.5 })
+        .to(modalClose, { opacity: 1, duration: 0.5, delay: 1.5 });
     };
 
-    const modalTlReverseFunc = (target, modalImg) => {
+    const modalTlReverseFunc = (target, modalImg, modalClose) => {
       return modalTlReverse
         .from(modalImg, { opacity: 1, duration: 0.5 })
-        .to(target, { opacity: 1, duration: 0.5 });
+        .to(target, {
+          opacity: 1,
+          duration: 0.5
+        })
+        .to(modalClose, {
+          opacity: 0,
+          duration: 0.5,
+          onComplete: setModalOpen(false)
+        });
     };
 
     const firstTlFunc = () => {
@@ -197,18 +209,12 @@ const Inspiration = () => {
   }, []);
 
   return (
-    <div className="inspiration_wrapper">
+    <>
       <div
         style={{ display: modalOpen ? "block" : "none" }}
         className="modal_container"
       >
-        <Link
-          id="modal_close"
-          className="link_nostyle modal_close"
-          ref={el => {
-            closeModal = el;
-          }}
-        >
+        <Link id="modal_close" to="#" className="link_nostyle modal_close">
           <CloseIcon style={{ fontSize: "56px" }} />
         </Link>
         <img id="modal_img" src="" alt="" />
@@ -223,25 +229,27 @@ const Inspiration = () => {
       >
         <CloseIcon style={{ fontSize: "56px" }} />
       </Link>
-      <div
-        ref={el => {
-          container = el;
-        }}
-        className="inspiration_container"
-      >
-        {imgArr.map((img, id) => (
-          <div
-            className="div_image"
-            key={id}
-            style={{
-              right: `0`
-            }}
-          >
-            <img className="inspiration_img" src={img} alt="" />
-          </div>
-        ))}
+      <div className="inspiration_wrapper">
+        <div
+          ref={el => {
+            container = el;
+          }}
+          className="inspiration_container"
+        >
+          {imgArr.map((img, id) => (
+            <div
+              className="div_image"
+              key={id}
+              style={{
+                right: `0`
+              }}
+            >
+              <img className="inspiration_img" src={img} alt="" />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

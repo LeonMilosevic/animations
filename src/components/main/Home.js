@@ -1,6 +1,27 @@
 import React from "react";
+// import images
+import imgWood from "../../assets/machine.jpg";
 
 const Home = () => {
+  React.useEffect(() => {
+    // declare variables so to change the themes accordingly
+    const displayImgBackground = document.querySelector(".display-img");
+    const shopNavLi = document.querySelectorAll(".shop_nav__li");
+    const logoLetters = document.querySelectorAll(".letters_span");
+    const mainNavLi = document.querySelectorAll(".li-items");
+    // changing theme to general
+    displayImgBackground.style.filter = "grayscale(1) brightness(50%)";
+    displayImgBackground.style.backgroundImage = `url(${imgWood})`;
+    shopNavLi.forEach(el => {
+      el.style.border = "15px solid pink";
+    });
+    logoLetters.forEach(letter => {
+      letter.style.color = "white";
+    });
+    mainNavLi.forEach(nav => {
+      nav.style.borderBottom = "1px solid white";
+    });
+  }, []);
   return (
     <div className="page">
       <h1>Home text</h1>
