@@ -1,4 +1,6 @@
 import React from "react";
+// third party
+import { Link } from "react-router-dom";
 // import components
 import Letters from "../ui/nav/Letters";
 import MenuItems from "../ui/nav/MenuItems";
@@ -6,6 +8,7 @@ import MenuItems from "../ui/nav/MenuItems";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -26,6 +29,7 @@ const Nav = () => {
       </div>
       <Letters />
       <MenuItems />
+      {/* <Link to="/wishlist"><FavoriteBorderIcon /></Link> */}
     </>
   );
 };

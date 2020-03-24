@@ -7,6 +7,8 @@ import Home from "../main/Home";
 import Contact from "../main/Contact";
 import Shop from "../main/Shop";
 import Inspiration from "../main/Inspiration";
+import FrameItem from "../main/FrameItem";
+import Wishlist from "../main/Wishlist";
 const Routes = () => {
   return (
     <Route
@@ -18,6 +20,8 @@ const Routes = () => {
               <Route exact path="/contact" component={Contact} />
               <Route exact path="/shop" component={Shop} />
               <Route exact path="/inspiration" component={Inspiration} />
+              <Route exact path="/shop/:id" component={FrameItem} />
+              <Route exact path="/wishlist" component={Wishlist} />
             </Switch>
           </CSSTransition>
         </TransitionGroup>
