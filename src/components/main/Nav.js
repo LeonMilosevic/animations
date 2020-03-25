@@ -8,7 +8,7 @@ import MenuItems from "../ui/nav/MenuItems";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import FavoriteIcon from "@material-ui/icons/Favorite";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -29,7 +29,9 @@ const Nav = () => {
       </div>
       <Letters />
       <MenuItems />
-      {/* <Link to="/wishlist"><FavoriteBorderIcon /></Link> */}
+      <Link className="wishlist" to="/wishlist">
+        <FavoriteIcon style={{ fontSize: "32px", color: "#a31b16" }} />
+      </Link>
     </>
   );
 };

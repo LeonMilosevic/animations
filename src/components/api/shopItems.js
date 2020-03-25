@@ -97,13 +97,6 @@ export const allFrames = [
       "https://res.cloudinary.com/clothify/image/upload/v1575472209/a2b_pjnchk.jpg"
   },
   {
-    title: "third frame 2",
-    price: 25,
-    description: "Random description about blablablablabla",
-    image:
-      "https://res.cloudinary.com/clothify/image/upload/v1575472209/a2b_pjnchk.jpg"
-  },
-  {
     title: "third frame 3",
     price: 30,
     description: "Random description about wood",
@@ -111,22 +104,8 @@ export const allFrames = [
       "https://res.cloudinary.com/clothify/image/upload/v1575472209/a2b_pjnchk.jpg"
   },
   {
-    title: "third frame 4",
-    price: 35,
-    description: "Random description about blablablablabla",
-    image:
-      "https://res.cloudinary.com/clothify/image/upload/v1575472209/a2b_pjnchk.jpg"
-  },
-  {
     title: "third frame 5",
     price: 40,
-    description: "Random description about blablablablabla",
-    image:
-      "https://res.cloudinary.com/clothify/image/upload/v1575472209/a2b_pjnchk.jpg"
-  },
-  {
-    title: "third frame 6",
-    price: 45,
     description: "Random description about blablablablabla",
     image:
       "https://res.cloudinary.com/clothify/image/upload/v1575472209/a2b_pjnchk.jpg"
@@ -139,13 +118,6 @@ export const allFrames = [
       "https://res.cloudinary.com/clothify/image/upload/v1578599563/Asset_24_fgewym.png"
   },
   {
-    title: "Wodden frame 2",
-    price: 25,
-    description: "Random description about blablablablabla",
-    image:
-      "https://res.cloudinary.com/clothify/image/upload/v1578599563/Asset_24_fgewym.png"
-  },
-  {
     title: "Wodden frame 3",
     price: 30,
     description: "Random description about wood",
@@ -153,22 +125,8 @@ export const allFrames = [
       "https://res.cloudinary.com/clothify/image/upload/v1578599563/Asset_24_fgewym.png"
   },
   {
-    title: "Wodden frame 4",
-    price: 35,
-    description: "Random description about blablablablabla",
-    image:
-      "https://res.cloudinary.com/clothify/image/upload/v1578599563/Asset_24_fgewym.png"
-  },
-  {
     title: "Wodden frame 5",
     price: 40,
-    description: "Random description about blablablablabla",
-    image:
-      "https://res.cloudinary.com/clothify/image/upload/v1578599563/Asset_24_fgewym.png"
-  },
-  {
-    title: "Wodden frame 6",
-    price: 45,
     description: "Random description about blablablablabla",
     image:
       "https://res.cloudinary.com/clothify/image/upload/v1578599563/Asset_24_fgewym.png"

@@ -10,7 +10,7 @@ import imgWood from "../../assets/machine.jpg";
 import Carousel from "./Carousel";
 const Shop = () => {
   // create state for a theme so when the user chooses the theme, the theme will show on the page
-  const [currentTheme, setCurrentTheme] = React.useState(woodenFrames);
+  const [currentTheme, setCurrentTheme] = React.useState(allFrames);
   // init carousel from materialize
   React.useEffect(() => {
     let elems = document.querySelectorAll(".carousel");
@@ -30,7 +30,7 @@ const Shop = () => {
     linear-gradient(to top, rgba(191,153,106, 0.5), rgb(135,108,75, 0.5)),
     url(${imgWood})`;
     shopNavLi.forEach(el => {
-      el.style.border = "15px solid #b59369";
+      el.style.border = "10px solid #b59369";
     });
     logoLetters.forEach(letter => {
       letter.style.color = "rgb(222,177,123)";
@@ -42,10 +42,37 @@ const Shop = () => {
 
   const handleThemePlastic = () => {
     setCurrentTheme(plasticFrames);
+
+    // changing theme to wooden
+    displayImgBackground.style.filter = "none";
+    displayImgBackground.style.backgroundImage = `
+        linear-gradient(to top, rgba(230, 220, 207, 0.5), rgb(189, 179, 168, 0.5)),
+        url(${imgWood})`;
+    shopNavLi.forEach(el => {
+      el.style.border = "10px solid #e6dccf";
+    });
+    logoLetters.forEach(letter => {
+      letter.style.color = "#e6dccf";
+    });
+    mainNavLi.forEach(nav => {
+      nav.style.borderBottom = "1px solid #e6dccf";
+    });
   };
 
   const handleThemeAll = () => {
     setCurrentTheme(allFrames);
+    // changing theme to general
+    displayImgBackground.style.filter = "grayscale(1) brightness(50%)";
+    displayImgBackground.style.backgroundImage = `url(${imgWood})`;
+    shopNavLi.forEach(el => {
+      el.style.border = "10px solid white";
+    });
+    logoLetters.forEach(letter => {
+      letter.style.color = "white";
+    });
+    mainNavLi.forEach(nav => {
+      nav.style.borderBottom = "1px solid white";
+    });
   };
 
   return (

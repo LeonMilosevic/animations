@@ -17,11 +17,11 @@
   }
 }
 // carousel settings
-.carousel {
+.carousel_shop {
   height: 570px !important;
 }
 
-.carousel-item {
+.carousel-item_shop {
   width: 400px !important;
   height: 400px !important;
 }
@@ -29,4 +29,15 @@
 .carousel-img {
   width: 400px !important;
   height: 400px !important;
+}
+.carousel_wishlistAdd {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.favorite_add {
+  opacity: 0.7;
+  filter: drop-shadow(2px 5px 3px rgba(0, 0, 0, 0.7));
 }
