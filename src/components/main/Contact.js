@@ -3,7 +3,7 @@ import React from "react";
 import { MdPhoneInTalk, MdEmail } from "react-icons/md";
 import { FaFacebookSquare } from "react-icons/fa";
 // import images
-import imgWood from "../../assets/machine.jpg";
+import imgWood from "../../assets/pictures.jpg";
 
 const Contact = () => {
   React.useEffect(() => {

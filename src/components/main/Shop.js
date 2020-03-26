@@ -5,7 +5,7 @@ import "materialize-css/dist/css/materialize.min.css";
 // import shop api
 import { woodenFrames, allFrames, plasticFrames } from "../api/shopItems";
 // import images
-import imgWood from "../../assets/machine.jpg";
+import imgWood from "../../assets/pictures.jpg";
 // import components
 import Carousel from "./Carousel";
 const Shop = () => {

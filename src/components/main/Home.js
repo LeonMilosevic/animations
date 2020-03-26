@@ -1,6 +1,6 @@
 import React from "react";
 // import images
-import imgWood from "../../assets/machine.jpg";
+import imgWood from "../../assets/pictures.jpg";
 
 const Home = () => {
   React.useEffect(() => {

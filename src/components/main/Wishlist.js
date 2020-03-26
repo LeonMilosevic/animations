@@ -4,7 +4,7 @@ import { gsap, Power1 } from "gsap";
 // import helpers
 import { getWishLocalStorage, removeWishLocalStorage } from "./helpers";
 // import images
-import imgWood from "../../assets/machine.jpg";
+import imgWood from "../../assets/pictures.jpg";
 // import icons
 import { MdDelete } from "react-icons/md";
 
