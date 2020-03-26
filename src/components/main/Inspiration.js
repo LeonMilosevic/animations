@@ -5,7 +5,7 @@ import { Power1 } from "gsap";
 import Draggable from "gsap/Draggable";
 import { Link } from "react-router-dom";
 // import icons
-import CloseIcon from "@material-ui/icons/Close";
+import { MdClose } from "react-icons/md";
 gsap.registerPlugin(Draggable);
 const Inspiration = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -215,7 +215,7 @@ const Inspiration = () => {
         className="modal_container"
       >
         <Link id="modal_close" to="#" className="link_nostyle modal_close">
-          <CloseIcon style={{ fontSize: "56px" }} />
+          <MdClose style={{ fontSize: "56px" }} />
         </Link>
         <img id="modal_img" src="" alt="" />
       </div>
@@ -227,7 +227,7 @@ const Inspiration = () => {
         className="link_nostyle back_icon"
         to="/"
       >
-        <CloseIcon style={{ fontSize: "56px" }} />
+        <MdClose style={{ fontSize: "56px" }} />
       </Link>
       <div className="inspiration_wrapper">
         <div

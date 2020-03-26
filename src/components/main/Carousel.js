@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // import helpers
 import { wishAddLocalStorage, animateFavorite } from "./helpers";
 // imoprt icons
-import FavoriteIcon from "@material-ui/icons/Favorite";
+import { MdFavorite } from "react-icons/md";
 
 const Carousel = props => {
   // listen for a click event on the link to distinguish between a tag and svg tag
@@ -28,7 +28,7 @@ const Carousel = props => {
           className="carousel-item carousel-item_shop"
         >
           <span className="carousel_wishlistAdd">
-            <FavoriteIcon
+            <MdFavorite
               onClick={animateFavorite}
               className="favorite_add"
               style={{ fontSize: "52px", color: "#a31b16" }}

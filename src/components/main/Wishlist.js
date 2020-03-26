@@ -6,7 +6,7 @@ import { getWishLocalStorage, removeWishLocalStorage } from "./helpers";
 // import images
 import imgWood from "../../assets/machine.jpg";
 // import icons
-import DeleteIcon from "@material-ui/icons/Delete";
+import { MdDelete } from "react-icons/md";
 
 const Wishlist = () => {
   // declare states
@@ -89,7 +89,7 @@ const Wishlist = () => {
                     className="grid_item"
                     style={{ backgroundImage: `url(${item.image})` }}
                   >
-                    <DeleteIcon
+                    <MdDelete
                       className="grid_item__remove"
                       onClick={e => removeItem(item.id, e)}
                     />

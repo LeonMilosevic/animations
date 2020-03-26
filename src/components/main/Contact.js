@@ -1,8 +1,7 @@
 import React from "react";
 // import icons
-import PhoneInTalkIcon from "@material-ui/icons/PhoneInTalk";
-import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
-import FacebookIcon from "@material-ui/icons/Facebook";
+import { MdPhoneInTalk, MdEmail } from "react-icons/md";
+import { FaFacebookSquare } from "react-icons/fa";
 // import images
 import imgWood from "../../assets/machine.jpg";
 
@@ -35,7 +34,7 @@ const Contact = () => {
         target="blank"
         href="https://www.facebook.com/R%C4%97minimo-centras-286353158077592"
       >
-        <FacebookIcon style={{ fontSize: "40px" }} />
+        <FaFacebookSquare style={{ fontSize: "40px" }} />
       </a>
     </div>
   );
@@ -48,10 +47,10 @@ const Contact = () => {
         <div style={{ marginTop: "20px" }}>
           <h4 className="contact_subheader">Contact info</h4>
           <div className="icon_text">
-            <PhoneInTalkIcon style={{ marginRight: "10px" }} /> (8-689) 36033
+            <MdPhoneInTalk style={{ marginRight: "10px" }} /> (8-689) 36033
           </div>
           <div className="icon_text">
-            <AlternateEmailIcon style={{ marginRight: "10px" }} />
+            <MdEmail style={{ marginRight: "10px" }} />
             domaskazakeviucius@gmail.com
           </div>
         </div>

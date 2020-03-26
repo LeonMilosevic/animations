@@ -2,7 +2,7 @@ import React from "react";
 // import helpers
 import { animateFavorite, wishAddLocalStorage } from "./helpers";
 // import icons
-import FavoriteIcon from "@material-ui/icons/Favorite";
+import { MdFavorite } from "react-icons/md";
 
 const FrameItem = props => {
   const [item, setItem] = React.useState();
@@ -38,7 +38,7 @@ const FrameItem = props => {
                   className="carousel_wishlistAdd"
                   style={{ position: "relative", top: 0, left: 0 }}
                 >
-                  <FavoriteIcon
+                  <MdFavorite
                     onClick={e => addToLS(item, e)}
                     className="favorite_add"
                     style={{ fontSize: "52px", color: "#a31b16" }}
@@ -50,7 +50,7 @@ const FrameItem = props => {
                   className="carousel_wishlistAdd"
                   style={{ position: "relative", top: 0, left: 0 }}
                 >
-                  <FavoriteIcon
+                  <MdFavorite
                     onClick={e => addToLS(item, e)}
                     className="favorite_add"
                     style={{ fontSize: "52px", color: "#a31b16" }}
