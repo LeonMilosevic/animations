@@ -1,3 +1,4 @@
+import { gsap, Power1 } from "gsap";
 // adding to local storage
 export const wishAddLocalStorage = item => {
   let wishlist = [];
@@ -30,7 +31,7 @@ export const removeWishLocalStorage = (id, next) => {
     }
 
     wishlist.map((product, i) => {
-      if (product._id === id) return wishlist.splice(i, 1);
+      if (product.id === id) return wishlist.splice(i, 1);
 
       return undefined;
     });
@@ -38,4 +39,22 @@ export const removeWishLocalStorage = (id, next) => {
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
   }
   next();
+};
+
+export const animateFavorite = e => {
+  let tl = new gsap.timeline();
+  tl.to(e.target.parentElement, {
+    scale: 1.4,
+    duration: 0.2,
+    ease: Power1,
+    filter: "drop-shadow( 20px 20px 10px rgba(0, 0, 0, .7)) blur(5px)",
+    opacity: 0.85
+  });
+  tl.to(e.target.parentElement, {
+    scale: 1,
+    duration: 0.2,
+    ease: Power1,
+    filter: "drop-shadow(2px 5px 3px rgba(0, 0, 0, 0.7)) blur(0px)",
+    opacity: 1
+  });
 };
