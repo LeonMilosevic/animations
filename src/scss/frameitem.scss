@@ -37,3 +37,8 @@
     margin: 0px 30px;
   }
 }
+@media only screen and (max-width: 450px) {
+  .frameitem_textbox {
+    margin-top: 0;
+  }
+}

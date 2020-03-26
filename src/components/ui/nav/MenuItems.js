@@ -35,6 +35,7 @@ const MenuItems = () => {
   return (
     <div className="link-container">
       <span
+        id="inspiration"
         ref={el => {
           box1 = el;
         }}

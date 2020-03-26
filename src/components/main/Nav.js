@@ -21,8 +21,8 @@ const Nav = () => {
 
       <Letters />
       <MenuItems />
-      <Link className="wishlist" to="/wishlist">
-        <MdFavorite style={{ fontSize: "32px", color: "#a31b16" }} />
+      <Link className="nav_wishlist" to="/wishlist">
+        <MdFavorite />
       </Link>
     </>
   );

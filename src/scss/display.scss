@@ -54,8 +54,37 @@
   font-weight: 700;
 }
 
-.wishlist {
+.nav_wishlist {
   position: absolute;
   top: 20px;
   right: 4%;
+  font-size: 32px;
+  color: #a31b16;
+}
+
+@media only screen and (max-width: 450px) {
+  .letters {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+  }
+  .letters_span {
+    font-size: 20px;
+    margin-bottom: 0;
+    opacity: 1;
+  }
+  .link-container {
+    position: absolute;
+    left: 50%;
+    top: 8%;
+  }
+  #inspiration {
+    display: none;
+  }
+  .nav_wishlist {
+    top: 12px;
+    right: 5%;
+    font-size: 32px;
+    color: #a31b16;
+  }
 }

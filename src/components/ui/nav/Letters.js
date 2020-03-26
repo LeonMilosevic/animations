@@ -22,97 +22,99 @@ const Letters = () => {
   let letterS = useRef(null);
   // use effect to call after the component mounts
   useEffect(() => {
-    // tweenmax code to show letters with delay
-    TweenMax.to(letterR, 2, {
-      opacity: 1,
-      y: -20,
-      ease: Power3.easeOut,
-      delay: 0.3
-    });
-    TweenMax.to(letterE, 2, {
-      opacity: 1,
-      y: -20,
-      ease: Power3.easeOut,
-      delay: 0.31
-    });
-    TweenMax.to(letterM, 2, {
-      opacity: 1,
-      y: -20,
-      ease: Power3.easeOut,
-      delay: 0.32
-    });
-    TweenMax.to(letterI, 2, {
-      opacity: 1,
-      y: -20,
-      ease: Power3.easeOut,
-      delay: 0.33
-    });
-    TweenMax.to(letterN, 2, {
-      opacity: 1,
-      y: -20,
-      ease: Power3.easeOut,
-      delay: 0.34
-    });
-    TweenMax.to(letterII, 2, {
-      opacity: 1,
-      y: -20,
-      ease: Power3.easeOut,
-      delay: 0.35
-    });
-    TweenMax.to(letterMM, 2, {
-      opacity: 1,
-      y: -20,
-      ease: Power3.easeOut,
-      delay: 0.36
-    });
-    TweenMax.to(letterO, 2, {
-      opacity: 1,
-      y: -20,
-      ease: Power3.easeOut,
-      delay: 0.37
-    });
-    TweenMax.to(letterC, 2, {
-      opacity: 1,
-      y: -20,
-      ease: Power3.easeOut,
-      delay: 0.38
-    });
-    TweenMax.to(letterEE, 2, {
-      opacity: 1,
-      y: -20,
-      ease: Power3.easeOut,
-      delay: 0.39
-    });
-    TweenMax.to(letterNN, 2, {
-      opacity: 1,
-      y: -20,
-      ease: Power3.easeOut,
-      delay: 0.4
-    });
-    TweenMax.to(letterT, 2, {
-      opacity: 1,
-      y: -20,
-      ease: Power3.easeOut,
-      delay: 0.41
-    });
-    TweenMax.to(letterRR, 2, {
-      opacity: 1,
-      y: -20,
-      ease: Power3.easeOut,
-      delay: 0.42
-    });
-    TweenMax.to(letterA, 2, {
-      opacity: 1,
-      y: -20,
-      ease: Power3.easeOut,
-      delay: 0.43
-    });
-    TweenMax.to(letterS, 2, {
-      opacity: 1,
-      y: -20,
-      ease: Power3.easeOut,
-      delay: 0.44
-    });
+    if (window.screen.width > 770) {
+      // tweenmax code to show letters with delay
+      TweenMax.to(letterR, 2, {
+        opacity: 1,
+        y: -20,
+        ease: Power3.easeOut,
+        delay: 0.3
+      });
+      TweenMax.to(letterE, 2, {
+        opacity: 1,
+        y: -20,
+        ease: Power3.easeOut,
+        delay: 0.31
+      });
+      TweenMax.to(letterM, 2, {
+        opacity: 1,
+        y: -20,
+        ease: Power3.easeOut,
+        delay: 0.32
+      });
+      TweenMax.to(letterI, 2, {
+        opacity: 1,
+        y: -20,
+        ease: Power3.easeOut,
+        delay: 0.33
+      });
+      TweenMax.to(letterN, 2, {
+        opacity: 1,
+        y: -20,
+        ease: Power3.easeOut,
+        delay: 0.34
+      });
+      TweenMax.to(letterII, 2, {
+        opacity: 1,
+        y: -20,
+        ease: Power3.easeOut,
+        delay: 0.35
+      });
+      TweenMax.to(letterMM, 2, {
+        opacity: 1,
+        y: -20,
+        ease: Power3.easeOut,
+        delay: 0.36
+      });
+      TweenMax.to(letterO, 2, {
+        opacity: 1,
+        y: -20,
+        ease: Power3.easeOut,
+        delay: 0.37
+      });
+      TweenMax.to(letterC, 2, {
+        opacity: 1,
+        y: -20,
+        ease: Power3.easeOut,
+        delay: 0.38
+      });
+      TweenMax.to(letterEE, 2, {
+        opacity: 1,
+        y: -20,
+        ease: Power3.easeOut,
+        delay: 0.39
+      });
+      TweenMax.to(letterNN, 2, {
+        opacity: 1,
+        y: -20,
+        ease: Power3.easeOut,
+        delay: 0.4
+      });
+      TweenMax.to(letterT, 2, {
+        opacity: 1,
+        y: -20,
+        ease: Power3.easeOut,
+        delay: 0.41
+      });
+      TweenMax.to(letterRR, 2, {
+        opacity: 1,
+        y: -20,
+        ease: Power3.easeOut,
+        delay: 0.42
+      });
+      TweenMax.to(letterA, 2, {
+        opacity: 1,
+        y: -20,
+        ease: Power3.easeOut,
+        delay: 0.43
+      });
+      TweenMax.to(letterS, 2, {
+        opacity: 1,
+        y: -20,
+        ease: Power3.easeOut,
+        delay: 0.44
+      });
+    }
   }, []);
   return (
     <div className="letters">
