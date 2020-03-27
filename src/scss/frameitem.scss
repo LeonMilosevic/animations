@@ -40,5 +40,17 @@
 @media only screen and (max-width: 450px) {
   .frameitem_textbox {
     margin-top: 0;
+    min-height: 100px;
+    &__price {
+      font-size: 18px;
+      font-weight: 700;
+    }
+    &__title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    &__description {
+      font-size: 12px;
+    }
   }
 }

@@ -16,25 +16,28 @@ const Wishlist = () => {
   let displayBox = useRef(null);
   // check for the theme, if not change it
   React.useEffect(() => {
-    // declare variables so to change the themes accordingly
-    const displayImgBackground = document.querySelector(".display-img");
-    if (displayImgBackground.style.filter === "none") {
-      const shopNavLi = document.querySelectorAll(".shop_nav__li");
-      const logoLetters = document.querySelectorAll(".letters_span");
-      const mainNavLi = document.querySelectorAll(".li-items");
-      // changing theme to general
-      displayImgBackground.style.filter = "grayscale(1) brightness(50%)";
-      displayImgBackground.style.backgroundImage = `url(${imgWood})`;
-      shopNavLi.forEach(el => {
-        el.style.border = "15px solid pink";
-      });
-      logoLetters.forEach(letter => {
-        letter.style.color = "white";
-      });
-      mainNavLi.forEach(nav => {
-        nav.style.borderBottom = "1px solid white";
-      });
+    if (window.screen.width > 770) {
+      // declare variables so to change the themes accordingly
+      const displayImgBackground = document.querySelector(".display-img");
+      if (displayImgBackground.style.filter === "none") {
+        const shopNavLi = document.querySelectorAll(".shop_nav__li");
+        const logoLetters = document.querySelectorAll(".letters_span");
+        const mainNavLi = document.querySelectorAll(".li-items");
+        // changing theme to general
+        displayImgBackground.style.filter = "grayscale(1) brightness(50%)";
+        displayImgBackground.style.backgroundImage = `url(${imgWood})`;
+        shopNavLi.forEach(el => {
+          el.style.border = "15px solid pink";
+        });
+        logoLetters.forEach(letter => {
+          letter.style.color = "white";
+        });
+        mainNavLi.forEach(nav => {
+          nav.style.borderBottom = "1px solid white";
+        });
+      }
     }
+
     // populate state with items from ls
     setWishList(getWishLocalStorage);
   }, []);
@@ -45,6 +48,16 @@ const Wishlist = () => {
       // animate with gsap
       let tl = new gsap.timeline();
       tl.to(displayBox, { opacity: 1, duration: 0.5, ease: Power1 });
+      if (window.screen.width < 770) {
+        const displayBox = document.querySelector(".display_box");
+        const modalBg = document.getElementById("modal_background");
+        modalBg.style.display = "block";
+        displayBox.style.display = "block";
+        modalBg.addEventListener("click", () => {
+          modalBg.style.display = "none";
+          displayBox.style.display = "none";
+        });
+      }
     }
   };
 
@@ -75,6 +88,7 @@ const Wishlist = () => {
   };
   return (
     <div className="container-fluid">
+      <div id="modal_background"></div>
       {wishlist.length === 0 ? (
         <h1 className="wishlist_empty">Empty</h1>
       ) : (
